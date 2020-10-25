@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+    $(function (){
+        // [全选/全不选] 复选框
+        $("#checkedAllBox").click(function (){
+            $(":checkbox[name]").prop("checked",this.checked);
+        });
+        // [全选]单击事件
+        $("#checkedAllBtn").click(function (){
+            $(":checkbox").prop("checked",true);
+        });
+        // [全不选]单击事件
+        $("#checkedNoBtn").click(function (){
+            $(":checkbox").prop("checked",false);
+        });
+        // [反选]单击事件
+        $("#checkedRevBtn").click(function (){
+            $(":checkbox[name]").each(function (){
+                this.checked = !this.checked;
+            });
+            //获取全部球类的个数
+            var allCount = $(":checkbox[name]").length;
+            //获取所有选中球类的个数
+            var checkedCount = $(":checkbox[name]:checked").length;
+
+            $("#checkedAllBox").prop("checked",allCount == checkedCount);
+        });
+        // [提交] 单击事件
+        $("#sendBtn").click(function (){
+            $(":checkbox[name]:checked").each(function (){
+                alert(this.value);
+            });
+        });
+        // 给所有 球类都添加 单击事件
+        $(":checkbox[name]").click(function (){
+            //获取全部球类的个数
+            var allCount = $(":checkbox[name]").length;
+            //获取所有选中球类的个数
+            var checkedCount = $(":checkbox[name]:checked").length;
+
+            $("#checkedAllBox").prop("checked",allCount == checkedCount);
+        });
+    });
+</script>
+<body>
+<form method="post" action="">
+
+    你爱好的运动是？<input type="checkbox" id="checkedAllBox" />全选/全不选
+
+    <br />
+    <input type="checkbox" name="items" value="足球" />足球
+    <input type="checkbox" name="items" value="篮球" />篮球
+    <input type="checkbox" name="items" value="羽毛球" />羽毛球
+    <input type="checkbox" name="items" value="乒乓球" />乒乓球
+    <br />
+    <input type="button" id="checkedAllBtn" value="全　选" />
+    <input type="button" id="checkedNoBtn" value="全不选" />
+    <input type="button" id="checkedRevBtn" value="反　选" />
+    <input type="button" id="sendBtn" value="提　交" />
+</form>
+
+</body>
+</html>

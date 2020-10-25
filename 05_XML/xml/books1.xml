@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<books>
+    <book sn="1001"><!--书籍编号 -->
+        <name>Java核心技术</name>
+        <author>张三</author>
+        <price>9.9</price>
+    </book>
+    <book sn="1002">
+        <name>&lt;大话设计模式&gt;</name>
+        <author>
+            <![CDATA[<>""李四]]>
+        </author>
+        <price>39.9</price>
+    </book>
+    <!--<book sn="1003" name="大话数据结构" author="王五" price="59.9"/>-->
+</books>

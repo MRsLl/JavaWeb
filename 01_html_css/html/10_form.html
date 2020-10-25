@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--需求1:创建一个个人信息注册的表单界面。包含用户名，密码，确认密码。性别（单选），兴趣爱好（多选），国籍（下拉列表）。
+隐藏域，自我评价（多行文本域）。重置，提交。
+
+    form    标签表示表单标签
+
+    input type=text 是单行文本输入框        value属性是默认值
+    input type=password 是密码输入框        value属性是默认值
+    input type=radio 是单选框   name属性可以对单选框进行分组 checked="checked"是默认选中
+    input type=checkbox 是复选框  checked="checked"是默认选中
+    input type=reset 是重置按钮 value属性修改按钮上的文本
+    input type=submit 是提交按钮 value属性修改按钮上的文本
+    input type=button 是普通按钮 value属性修改按钮上的文本
+    input type=file 是文件上传域
+    input type=hidden 是隐藏域,当我们需要给服务器发送一些数据,而这些数据,不需要用户参与,就可以使用隐藏域
+
+    select是下拉列表 ( 默认选中第一项 )
+    option是下拉列表项 selected="selected"表示默认选中
+
+    textarea 是多行文本输入框   默认值是起始标签和结束标签中的文本内容
+        cols="30"表示一行显示几个字符
+        rows="10"几行的高度
+
+-->
+<!--
+        form标签是表单标签
+            action  表单提交的服务器地址
+            method  提交的方式 GET 或 POST
+
+        表单提交需要注意的三个点:
+            1 表单项一定要有name属性值,否则不会提交给服务器
+            2 单选,复选( 下拉列表中的option )都需要添加value属性值,否则就会发送on
+            3 表单项,必须在提交的form标签里,提交时才会发送给服务器
+
+        GET请求的特点( 默认是GET请求 ):
+            1 浏览器地址栏中是action属性值 + [?+请求参数(name=value&name=value)]
+                请求的参数格式是 :      name=value&name=value
+                        name=value
+                           name是表单项的name属性值
+                           value是表单项的值
+                        & 是每一个表单项的分隔符
+            2 GET请求不安全
+            3 GET请求数据有长度限制
+
+        POST请求的特点:
+            1 浏览器地址栏中是只有action属性值
+            2 相对GET请求要安全
+            3 提交的数据理论上没有长度限制
+    -->
+
+<form action="http://localhost:8080">
+    <input type="hidden" name="hidden" value="he1">
+    <h1 align="center">表单</h1>
+    <table align="center">
+        <tr>
+            <td>用户名：</td>
+            <td><input type="text" name="username" value="0713Java"></td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td>性别：</td>
+            <td>
+                <input type="radio" checked="checked" name="sex" value="男">男
+                <input type="radio" name="sex">女
+            </td>
+        </tr>
+        <tr>
+            <td>兴趣爱好：</td>
+            <td>
+                <input type="checkbox" checked="checked" name="hobby" value="Java">Java
+                <input type="checkbox" checked="checked" name="hobby" value="cpp">cpp
+                <input type="checkbox" name="hobby" value="c#">c#
+                <input type="checkbox" name="hobby" value="Python">Python
+            </td>
+        </tr>
+        <tr>
+            <td>国籍：</td>
+            <td>
+                <select name="selection">
+                    <option value="none">请选择国籍</option>
+                    <option>中国</option>
+                    <option>美国</option>
+                    <option>英国</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>自我介绍：</td>
+            <td><textarea name="desc" id="" cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td>上传文件：</td>
+            <td><input type="file"></td>
+        </tr>
+        <tr>
+            <td><input type="reset"></td>
+            <td><input type="submit"></td>
+        </tr>
+
+    </table>
+</form>
+</body>
+</html>

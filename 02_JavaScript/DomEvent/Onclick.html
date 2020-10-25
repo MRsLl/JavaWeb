@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+    function onClick(){
+        alert("onclick静态1");
+        alert("onclick静态2");
+        alert("onclick静态3");
+    }
+    window.onload = function (){
+        //1 通过js代码获取标签对象
+        var btnObj = document.getElementById("bt01");
+        //2 通过标签对象.事件名 = function(){}
+        btnObj.onclick = function() {
+            alert("动态点击");
+        }
+    }
+</script>
+<body>
+<button onclick="onClick()">静态按钮</button>
+<button id="bt01">动态按钮</button>
+</body>
+</html>

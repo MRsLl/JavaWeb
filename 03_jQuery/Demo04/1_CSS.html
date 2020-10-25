@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style type="text/css">
+
+    div{
+        width:100px;
+        height:260px;
+    }
+
+    div.whiteborder{
+        border: 2px white solid;
+    }
+
+    div.redDiv{
+        background-color: red;
+    }
+
+    div.blueBorder{
+        border: 5px blue solid;
+    }
+
+</style>
+<script src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+    $(function (){
+        var $divEle = $("div:first");
+
+        $("#btn01").click(function (){
+            $divEle.addClass("redDiv blueBorder");
+        });
+
+        $("#btn02").click(function (){
+            $divEle.removeClass("redDiv");
+        });
+
+        $("#btn03").click(function (){
+            $divEle.toggleClass("redDiv");
+        });
+
+        $("#btn04").click(function (){
+            var offest = $divEle.offset();
+            console.log(offest);
+            $divEle.offset({
+                top:100,
+                left:100
+            })
+        });
+    });
+
+</script>
+<body>
+
+<table align="center">
+    <tr>
+        <td>
+            <div class="border">
+            </div>
+        </td>
+
+        <td>
+            <div class="btn">
+                <input type="button" value="addClass()" id="btn01"/>
+                <input type="button" value="removeClass()" id="btn02"/>
+                <input type="button" value="toggleClass()" id="btn03"/>
+                <input type="button" value="offset()" id="btn04"/>
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+<br/> <br/>
+
+
+<br/> <br/>
+
+
+</body>
+</body>
+</html>

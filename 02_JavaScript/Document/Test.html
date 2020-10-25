@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload = function (){
+            var htmlDivdocument = document.createElement("div");
+
+            var textNode = document.createTextNode("文本节点");
+
+            htmlDivdocument.appendChild(textNode);
+
+            htmlDivdocument.innerText = "我的div";
+
+            htmlDivdocument.onclick = function (){
+                alert("动态注册");
+            }
+
+            document.body.appendChild(htmlDivdocument);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

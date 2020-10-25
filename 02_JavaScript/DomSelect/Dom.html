@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style/css.css" />
+</head>
+<script type="text/javascript">
+    window.onload = function () {
+        //1.查找#bj节点
+        document.getElementById("btn01").onclick = function () {
+            alert(document.getElementById("bj").innerHTML);
+        };
+        //2.查找所有li节点
+        document.getElementById("btn02").onclick = function () {
+            var lis = document.getElementsByTagName("li");
+            alert(lis.length);
+        };
+        //3.查找name=gender的所有节点
+        var btn03Ele = document.getElementById("btn03");
+        btn03Ele.onclick = function () {
+            var elementsByName = document.getElementsByName("gender");
+            alert(elementsByName.length);
+        };
+        //4.查找#city下的li节点
+        document.getElementById("btn04").onclick = function(){
+            var lis = document.getElementById("city").getElementsByTagName("li");
+            alert(lis.length);
+        }
+        //5.返回#city的所有子节点
+        document.getElementById("btn05").onclick = function (){
+            alert(document.getElementById("city").childNodes.length);
+        }
+        //6.返回#phone的第一个子节点
+        document.getElementById("btn06").onclick = function (){
+            alert(document.getElementById("phone").firstChild.innerHTML);
+        }
+        //7.返回#bj的父节点
+        document.getElementById("btn07").onclick = function (){
+            alert(document.getElementById("bj").parentNode.innerHTML);
+        }
+        //8.返回#android的前一个兄弟节点
+        document.getElementById("btn08").onclick = function (){
+            alert(document.getElementById("android").previousSibling.innerHTML);
+        }
+        //9.读取#username的value属性值
+        document.getElementById("btn09").onclick = function (){
+            alert(document.getElementById("username").value);
+        }
+        //10.设置#username的value属性值
+        document.getElementById("btn10").onclick = function (){
+            document.getElementById("username").value = "修改username";
+        }
+        //11.返回#bj的文本值
+        document.getElementById("btn11").onclick = function (){
+            alert(document.getElementById("bj").innerText);
+        }
+
+
+    }
+</script>
+<body>
+<div id="total">
+    <div class="inner">
+        <p>
+            你喜欢哪个城市?
+        </p>
+
+        <ul id="city">
+            <li id="bj">北京</li>
+            <li>上海</li>
+            <li>东京</li>
+            <li>首尔</li>
+        </ul>
+
+        <br>
+        <br>
+
+        <p>
+            你喜欢哪款单机游戏?
+        </p>
+
+        <ul id="game">
+            <li id="rl">红警</li>
+            <li>实况</li>
+            <li>极品飞车</li>
+            <li>魔兽</li>
+        </ul>
+
+        <br />
+        <br />
+
+        <p>
+            你手机的操作系统是?
+        </p>
+
+        <ul id="phone"><li>IOS</li><li id="android">Android</li><li>Windows Phone</li></ul>
+    </div>
+
+    <div class="inner">
+        gender:
+        <input type="radio" name="gender" value="male"/>
+        Male
+        <input type="radio" name="gender" value="female"/>
+        Female
+        <br>
+        <br>
+        name:
+        <input type="text" name="name" id="username" value="abcde"/>
+    </div>
+</div>
+<div id="btnList">
+    <div><button id="btn01">查找#bj节点</button></div>
+    <div><button id="btn02">查找所有li节点</button></div>
+    <div><button id="btn03">查找name=gender的所有节点</button></div>
+    <div><button id="btn04">查找#city下所有li节点</button></div>
+    <div><button id="btn05">返回#city的所有子节点</button></div>
+    <div><button id="btn06">返回#phone的第一个子节点</button></div>
+    <div><button id="btn07">返回#bj的父节点</button></div>
+    <div><button id="btn08">返回#android的前一个兄弟节点</button></div>
+    <div><button id="btn09">返回#username的value属性值</button></div>
+    <div><button id="btn10">设置#username的value属性值</button></div>
+    <div><button id="btn11">返回#bj的文本值</button></div>
+</div>
+</body>
+</html>

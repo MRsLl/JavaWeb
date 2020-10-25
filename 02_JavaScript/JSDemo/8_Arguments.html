@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    /*函数的 arguments 隐形参数（只在function函数内）
+相当于java语言中的可变长参数
+
+    public void fun(Object .... args);
+
+    可变长参数是一个数组.
+
+
+    我们的隐形参数也是可变长参数一样 ( 隐形参数可获取函数调用时传递进来的所有参数值 ) .
+        隐形是指不需要我们显示的去定义.
+        既然隐形参数跟可变长参数一样.所以它的操作也类似,都可以像数组一样获取函数传递进来的值.*/
+    function fun(){
+        alert(arguments.length);
+        alert(arguments[0]);
+        alert(arguments[1]);
+        alert(arguments[2]);
+    }
+    //fun(true,123,"abc");
+
+    var sum = function(num1,num2){
+        var sum = 0;
+        for(var i = 0;i < arguments.length;i++) {
+            if (typeof (arguments[i]) == "number"){
+                sum += arguments[i];
+            }
+        }
+        return sum;
+    }
+    alert(sum(true,12,20,false,"abc"));
+</script>
+</body>
+</html>

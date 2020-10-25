@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+        function checkAll() {
+            // 通过标签名查找标签对象集合返回.
+            // 这个集合的操作跟数组一样
+            // 集合中的元素顺序,是他们在html页面中从上到下的顺序
+            var elementsByTagName = document.getElementsByTagName("input");
+            // 遍历获取每一个复选框,设置checked值为true
+           /* for (var i = 0; i < elementsByTagName.length; i++) {
+                elementsByTagName[i].checked = true;
+            }*/
+            elementsByTagName[6].checked = true;
+            elementsByTagName[7].checked = true;
+            elementsByTagName[8].checked = true;
+            elementsByTagName[9].checked = true;
+        }
+
+
+    </script>
+</head>
+<body>
+<input type="radio" checked="checked" name="sex" value="男">男
+<input type="radio" name="sex">女<br>
+
+兴趣爱好:
+<input type="checkbox" checked="checked" value="java"> Java
+<input type="checkbox" value="cpp"> C++
+<input type="checkbox" value="js"> JavaScript
+<input type="checkbox" value="lua"> Lua
+<br>
+
+兴趣爱好:
+<input type="checkbox" checked="checked" value="java"> Java
+<input type="checkbox" value="cpp"> C++
+<input type="checkbox" value="js"> JavaScript
+<input type="checkbox" value="lua"> Lua
+<br>
+<button onclick="checkAll();">全选</button>
+
+
+</body>
+</html>

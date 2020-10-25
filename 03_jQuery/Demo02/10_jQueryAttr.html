@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript " src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+    $(function (){
+        var attr = $(":checkbox:eq(1)").attr("value");
+        alert(attr);
+        $(":checkbox:eq(1)").attr("value","复选框2");
+
+        $(":checkbox:eq(2)").attr("on","on");
+    });
+</script>
+<body>
+多选：
+<input name="checkbox1" abc="abcValue" type="checkbox" value="checkbox1" />checkbox1
+<input name="checkbox2" type="checkbox" value="checkbox2" />checkbox2
+<input name="checkbox3" type="checkbox" value="checkbox3" />checkbox3
+<br/>
+</body>
+</html>

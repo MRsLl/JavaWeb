@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--JS 中 数组的定义：
+格式：
+var 数组名 = [];	// 空数组
+var 数组名 = [1,’abc’,true];	// 定义数组同时赋值元素-->
+<script type="text/javascript">
+    var arr = [];
+    var arr = [10,true];
+    //alert(arr.length);
+    arr[0] = 12;
+    arr[2] = "abc";
+
+    // alert(arr[0]);//12
+    // alert(arr[1]);//true
+    // alert(arr[2]);//abc
+
+    /*在javaScript语言中,如果我们通过数组的下标对数组进行赋值操作.
+    则javaScript语言会自动的根据赋值的最大下标值做扩容操作*/
+    //alert(arr.length);//3
+
+    for (var i = 0; i < arr.length;i++){
+        alert(arr[i]);
+    }
+</script>
+</body>
+</html>

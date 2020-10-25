@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+    //console是控制台对象,是javaScript语言中用于打印输出测试的对象
+    // log() 控制台输出    System.out.println()
+    function onblurFun(){
+        console.log("静态注册onblur事件");
+    }
+    window.onload = function(){
+        //1.通过标签id获得标签dom对象
+        var elementById = document.getElementById("pass");
+        //2.通过标签dom对象，事件名 = function(){}
+        elementById.onblur = function(){
+            console.log("动态注册onblur事件");
+        }
+    }
+</script>
+<body>
+用户名: <input type="text" onblur="onblurFun();"> <br>
+密码: <input id="pass" type="password" > <br>
+
+</body>
+</html>

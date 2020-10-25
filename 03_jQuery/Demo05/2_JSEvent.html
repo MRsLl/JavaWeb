@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+    /*window.onload = function (){
+        document.getElementById("areaDiv").onclick = function (event){
+            console.log(event);
+        }
+    };*/
+    $(function (){
+        /*$("#areaDiv").click(function (event){
+            console.log(event);
+        });*/
+
+        $("#areaDiv").bind("click mouseover mouseout",function (event){
+            if (event.type == "click"){
+                console.log("你碰了我");
+            }else if (event.type == "mouseover"){
+                console.log("你来了");
+            }else if (event.type == "mouseout"){
+                console.log("你又走了");
+            }
+        })
+    });
+</script>
+<body>
+<button id="areaDiv">按钮</button>
+</body>
+</html>

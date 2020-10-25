@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+    $(function (){
+    /*var $button = $("button");
+    for (var i = 0;i < $button.length;i++){
+        alert($button[i]);
+    }*/
+
+    //dom对象调用dom方法
+    /*var div = document.getElementById("testDiv");
+    div.innerText = "Dom对象的方法";*/
+
+    /*//jQuery对象调用dom方法
+    alert($("#testDiv").innerText);*/
+
+    /*//jQuery对象调用jQuery方法
+        $("#jQuery2jQuery").click(function (){
+            alert("jQuery对象单击事件");
+        });*/
+
+    //使用DOM对象调用jQuery方法
+        document.getElementById("dom2jQuery").click(function (){
+            alert("dom对象单击事件");
+        });
+    });
+</script>
+<body>
+<div id="testDiv">Atguigu is Very Good!</div>
+
+<button id="dom2dom">使用DOM对象调用DOM方法</button>
+<button id="dom2jQuery">使用DOM对象调用jQuery方法</button>
+<button id="jQuery2jQuery">使用jQuery对象调用jQuery方法</button>
+<button id="jQuery2dom">使用jQuery对象调用DOM方法</button>
+</body>
+</html>

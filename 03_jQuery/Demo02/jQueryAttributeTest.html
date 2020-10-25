@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+   /* $(function (){
+        alert($("div").html());
+        $("div").html('<span>' + "对第一个div重写" + '</span>' + '<br/>'
+            + '<div>' + "能否多行显示" + '</div>');
+    });*/
+
+    /*window.onload = function (){
+        var divElement = document.getElementsByTagName("div");
+        alert(divElement[0].innerHTML);
+
+        divElement[0].innerHTML = "<span>对第一个div进行重写</span><br/> " +
+            "<div>测试能否分行</div>";
+    }*/
+
+    //显示所有与选择器匹配的标签内的文本拼接
+    $(function (){
+        alert($("div").text());
+        $("div").text("对第一个div重写<br/>能否多行显示");
+    });
+
+   /* window.onload = function (){
+        var divElement = document.getElementsByTagName("div");
+        alert(divElement[0].innerText);
+
+        divElement[0].innerText = "<span>对第一个div进行重写</span><br/> " +
+            "<div>测试能否分行</div>";
+    }*/
+</script>
+<body>
+<div>jQuery</div>
+<div>属性操作测试</div>
+</body>
+</html>

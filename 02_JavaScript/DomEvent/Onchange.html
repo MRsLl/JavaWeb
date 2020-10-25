@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function onchangeFun(){
+            alert("选择的内容发生了改变==静态注册");
+        }
+        window.onload = function(){
+            var elementById = document.getElementById("sel01");
+            elementById.onchange = function (){
+                alert("选择的内容发生了改变==动态注册");
+            }
+        }
+    </script>
+</head>
+<body>
+下拉1
+<select onchange="onchangeFun()">
+    <option>1111</option>
+    <option>2222</option>
+    <option>3333</option>
+</select> <br>
+
+下拉2
+<select id="sel01">
+    <option>1111</option>
+    <option>2222</option>
+    <option>3333</option>
+</select> <br>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*Object形式的自定义对象
+    定义
+
+    var 变量名 = new Object(); //定义了一个空的对象实例
+    变量名.属性名1 = 值; // 添加一个属性
+    变量名.属性名2 = 值; // 添加另一个属性
+    变量名.函数名 = function(){}// 添加一个方法
+
+    访问:变量名.属性名/方法名( 参数 );*/
+    var student = new Object();
+
+    student.name = "张三";
+    student.age = 18;
+    student.getStudent = function(){
+        alert("姓名：" + this.name + ",年龄：" + this.age);
+    }
+
+    student.getStudent();
+    alert(student.name);
+    alert(student.age);
+    // alert(student);
+    // alert(typeof(student));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onsubmitFun() {
+            alert("验证表单项是否合法!");
+            alert("发现不合法,就阻止提交");
+            return false;
+        }
+        window.onload = function(){
+            var elementById = document.getElementById("form01");
+            elementById.onsubmit = function (){
+                alert("动态 验证表单项是否合法!");
+                alert("动态 发现不合法,就阻止提交")
+                //return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="http://localhost:8080" onsubmit="return onsubmitFun();">
+    <input type="submit" value="静态 提交">
+</form>
+
+<form action="http://localhost:8080" id="form01">
+    <input type="submit" value="动态 提交">
+</form>
+
+</body>
+</html>

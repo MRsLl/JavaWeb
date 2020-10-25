@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        //1.传入参数为函数时表示页面加载时调用函数
+        $(function (){
+            //2.传入参数为html标签时会帮我们创建html标签对象
+            $("<div> <span>1</span> <span>2</span> </div>").appendTo ("body");
+            //3.传入参数为选择器字符串时
+           /*$("#btnId");// 根据id属性查找标签对象返回
+            $("button");// 根据标签名查找对象返回
+            $(".classA");//根据给定的class属性查找标签对象*/
+
+           //4.传入参数为dom对象时，会把dom对象转换为jQuery对象
+            var elementById = document.getElementById("btnid");
+            alert(elementById);
+
+            var $1 = $(elementById);
+            alert($1);
+        });
+    </script>
+</head>
+<body>
+<button id="btnid">$参数</button>
+</body>
+</html>

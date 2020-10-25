@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+    $(function (){
+        //全选/全不选按钮
+        $("#checkedAllBox").click(function(){
+            $(":checkbox[name]").prop("checked",this.checked);
+        });
+        //全选按钮
+        $("#checkedAllBtn").click(function(){
+            $(":checkbox").prop("checked",true);
+        });
+        //全不选按钮
+        $("#checkedNoBtn").click(function(){
+            $(":checkbox").prop("checked",false);
+        });
+        //反选按钮
+        $("#checkedRevBtn").click(function (){
+            $(":checkbox[name]").each(function (){
+                /*if (this.checked()){
+                    this.prop("checked",true);
+                }else {
+                    this.prop("checked",false);
+                }*/
+                this.checked = !this.checked;
+            });
+            var sumNumber = $(":checkbox[name]").length;
+            var checkedNumber = $(":checkbox[name]:checked").length;
+
+            $("#checkedAllBox").prop("checked",sumNumber == checkedNumber);
+        });
+        //提交按钮
+        $("#sendBtn").click(function (){
+            $(":checkbox[name]:checked").each(function (){
+                alert(this.value);
+            });
+        });
+        //给所有球类添加是否全选判断
+        $(":checkbox[name]").click(function (){
+            var sumNumber = $(":checkbox[name]").length;
+            var checkedNumber = $(":checkbox[name]:checked").length;
+
+            $("#checkedAllBox").prop("checked",sumNumber == checkedNumber);
+        });
+    });
+</script>
+<body>
+<form method="post" action="">
+
+    你爱好的运动是？<input type="checkbox" id="checkedAllBox" />全选/全不选
+
+    <br />
+    <input type="checkbox" name="items" value="足球" />足球
+    <input type="checkbox" name="items" value="篮球" />篮球
+    <input type="checkbox" name="items" value="羽毛球" />羽毛球
+    <input type="checkbox" name="items" value="乒乓球" />乒乓球
+    <br />
+    <input type="button" id="checkedAllBtn" value="全　选" />
+    <input type="button" id="checkedNoBtn" value="全不选" />
+    <input type="button" id="checkedRevBtn" value="反　选" />
+    <input type="button" id="sendBtn" value="提　交" />
+</form>
+</body>
+</html>

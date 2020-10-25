@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            //1.click()
+           /* $("#btn1").click(function (){
+               alert("点击按钮1");
+            });
+            $("#btn2").click(function (){
+                $("#btn1").click();
+            });*/
+
+            //2.mouseover()鼠标移入事件
+            /*$("#btn1").mouseover(function (){
+                alert("你来了")
+            });*/
+
+            //3.mouseout ()鼠标移出事件
+            /*$("#btn1").mouseout(function (){
+                alert("你走了")
+            });*/
+
+            //4.bind()给jQuery对象绑定一个或多个事件
+            $("#btn1").bind("click mouseover mouseout", function (){
+               //alert("捆绑事件");
+                console.log("捆绑事件");
+            });
+
+            //6.unbind() 跟bind相反的操作，解除事件绑定
+            // $("#btn1").unbind();
+
+            //5.one()，使用跟 bind() ，单绑定的事件只响应一次
+            /*$("#btn2").one("click mouseover",function (){
+                console.log("one事件");
+            });*/
+
+            //7.live() 给所有匹配选择器的元素都绑上事件，哪怕这个元素是后面创建的
+            $("button").live("click",function (){
+                alert("点击按钮");
+            });
+
+            $('<button>' + "按钮3" + '</button>').appendTo("body");
+
+        });
+    </script>
+</head>
+<body>
+<button id="btn1">按钮1</button>
+<button id="btn2">按钮2</button>
+</body>
+</html>

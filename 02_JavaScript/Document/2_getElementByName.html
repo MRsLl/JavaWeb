@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+    function checkedAll() {
+       /* 1 按name属性查找标签对象集合返回
+        2 这个集合的操作跟数组一样
+        3 集合中都是dom对象( 标签对象 )
+        4 集合中的元素是有顺序的,他们的顺序是他们在html页面中从上到下的顺序*/
+       var hobby = document.getElementsByName("hobby");
+       for (var i = 0;i < hobby.length; i++){
+           hobby[i].checked = true;
+       }
+    }
+    function checkedNo() {
+        var hobby = document.getElementsByName("hobby");
+        for (var i = 0;i < hobby.length; i++){
+            hobby[i].checked = false;
+        }
+    }
+    function checkedReverse() {
+        var hobby = document.getElementsByName("hobby");
+        for (var i = 0;i < hobby.length; i++){
+            if (hobby[i].checked){
+                hobby[i].checked = false;
+            }else {
+                hobby[i].checked = true;
+            }
+        }
+    }
+</script>
+<body>
+兴趣爱好:
+<input type="checkbox" name="hobby" checked="checked"  value="java">java
+<input type="checkbox" name="hobby" value="cpp">c++
+<input type="checkbox" name="hobby" value="js">javaScript
+<br>
+<button onclick="checkedAll();">全选</button>
+<button onclick="checkedNo();">全不选</button>
+<button onclick="checkedReverse();">反选</button>
+
+</body>
+</html>

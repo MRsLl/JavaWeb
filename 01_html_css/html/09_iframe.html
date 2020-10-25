@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+       iframe可以开辟一个小窗口,用于显示一个单独的html页面
+           src属性设置你要显示的html页面的路径
+
+       iframe标签和a标签组合使用的步骤如下:
+           1 在iframe标签上使用name属性指定一个名称
+           2 在a标签的target属性上,设置iframe标签的name属性值
+   -->
+<iframe src="07_table.html" frameborder="10" height="500" width="500" name="table"></iframe>
+<ul>
+    <li> <a href="05_list.html" target="table">5.list.html</a> </li>
+    <li> <a href="04_link.html" target="table">4.link.html</a></li>
+    <li> <a href="02_special.html" target="table">2.special.html</a></li>
+</ul>
+</body>
+</html>

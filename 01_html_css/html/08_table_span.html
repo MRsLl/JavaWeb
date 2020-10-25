@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+   需求1：新建一个五行，五列的表格，
+   第一行，第一列的单元格要跨两列，
+   第二行第一列的单元格跨两行，
+   第四行第四列的单元格跨两行两列。
+
+   colspan 设置跨几列
+   rowspan 设置跨几行
+   -->
+<table border="1" width="300" height="300" cellpadding="10" align="center">
+    <tr >
+        <th colspan="2">表头1</th>
+        <th>表头3</th>
+        <th>数据4</th>
+        <th>数据5</th>
+    </tr>
+    <tr>
+        <td rowspan="2">数据2</td>
+        <td>数据3</td>
+        <td>数据3</td>
+        <td>数据4</td>
+        <td>数据5</td>
+    </tr>
+    <tr>
+        <td>数据5</td>
+        <td>数据6</td>
+        <td>数据4</td>
+        <td>数据5</td>
+
+    </tr>
+    <tr>
+        <td>数据4</td>
+        <td>数据5</td>
+        <td>数据6</td>
+        <td colspan="2" rowspan="2">数据4</td>
+    </tr>
+    <tr>
+        <td>数据4</td>
+        <td>数据5</td>
+        <td>数据6</td>
+    </tr>
+
+</table>
+
+</body>
+</html>

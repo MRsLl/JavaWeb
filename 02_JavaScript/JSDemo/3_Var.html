@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+JavaScript的变量类型：
+数值类型：		number
+字符串类型：	string
+对象类型：		object
+布尔类型：		boolean
+函数类型：		function
+
+JavaScript里特殊的值：
+undefined			未定义,所有没有赋于初始值的变量的默认值都是undefined.
+null					空值
+NaN					not a number 非数字,非数值( 经常用于在错误算术运算中,得到的结果 ).
+-->
+<script type="text/javascript">
+    var i;
+    //alert(i);//undefined
+    //alert(typeof(i));//undefined
+
+    i = 12;
+    //alert(typeof(i));//number
+
+    i = "abc";
+    //alert(typeof(i));//string
+
+    var a = 12;
+    var b = "abc";
+    //alert(a * b);//NaN
+    alert(a + b);//12abc
+</script>
+</body>
+</html>

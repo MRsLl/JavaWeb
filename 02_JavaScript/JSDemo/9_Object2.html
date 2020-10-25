@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*{}花括号形式的自定义对象
+    定义:
+        var 变量名 = {
+            属性:值 ,    /// 添加一个属性
+            属性:值 ,   // 又添加一个属性
+            函数名:function(){}  // 添加一个方法
+        }
+
+    访问:
+        变量名.属性名/方法名( 参数 );*/
+    var student = {
+        name : "张三",
+        age : 18,
+        toString : function(){
+            alert("姓名:" + this.name +",年龄:" + this.age);
+        }
+    }
+    alert(student.name);
+    student.toString();
+
+</script>
+</body>
+</html>

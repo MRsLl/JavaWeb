@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    // 在Java中函数允许重载。但是在JS中函数的重载会直接覆盖掉上一次的定义
+
+    function fun(){
+        alert("无参函数");
+    }
+    function fun(a,b){
+        alert("有参函数" + a + "," + b);
+    }
+    fun();
+</script>
+</body>
+</html>

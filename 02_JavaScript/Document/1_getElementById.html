@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+    // 要求,当点击了[验证]按钮之后,我们要获取输入框里用户名的内容,然后验证其是否合法,
+    // 而且用户名必须由字母,数字,下划线组成.并且长度是5,到12位
+    function checkUsername() {
+        var usernameObj = document.getElementById("username");
+        var usernameText = usernameObj.value;
+
+        var spanObj = document.getElementById("usernameSpan");
+        //var innerHTML = spanObj.innerHTML;
+        spanObj.innerHTML = "span块";
+
+        var usernamePat = /^\w{5,12}$/;
+        if (usernamePat.test(usernameText)) {
+            //alert("用户名合法");
+            spanObj.innerHTML = '<img width = "18" height = "18" src = "right.png">';
+        } else {
+            //alert("用户名不合法");
+            spanObj.innerHTML = '<img width = "18" height = "18" src = "wrong.png">';
+        }
+    }
+</script>
+<body>
+用户名: <input type="text" id="username" value="abc">
+<span style="color: red;" id="usernameSpan">
+
+    </span>
+<button onclick="checkUsername();">验证</button>
+
+</body>
+</html>

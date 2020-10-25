@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*  第一种，可以使用function关键字来定义函数。
+  格式如下:
+      function 函数名( 参数列表 ) {
+          函数体
+      }
+  */
+    //无参函数
+    function fun() {
+        alert("fun(),真好用");
+    }
+    //fun();
+
+    //有参函数
+    function fun1(a,b) {
+        alert("fun1,你的参数是" + a + "," + b);
+    }
+    //fun1(true,"abc");
+
+    function sum(a,b) {
+        var result = a + b;
+        return result;
+    }
+
+    alert(sum(1,2));
+    alert(sum("abc",123));
+</script>
+</body>
+</html>
